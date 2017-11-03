@@ -14,8 +14,9 @@ import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilde
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
-import com.woyi.mhub.domain.DemoEntity;
-import com.woyi.mhub.repository.DemoRepository;
+
+import com.woyi.xjhub.domain.DemoEntity;
+import com.woyi.xjhub.repository.DemoRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
