@@ -22,12 +22,7 @@ public class IndexController {
     @RequestMapping("/hello")  
     public String index(HttpServletRequest request, Model model) {
     	List<DemoEntity> list = demoService.getAll();
-    	if(null != list && !list.isEmpty()) {
-    		for (DemoEntity demoEntity : list) {
-				System.out.println(demoEntity);
-			}
-    	}
-    	model.addAttribute("a", "hello world!A");
+    	model.addAttribute("list", list);
         return "index";  
     }  
 }

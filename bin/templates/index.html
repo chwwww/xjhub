@@ -10,7 +10,17 @@
 </head>
 
 <body id="page-top" class="index">
-${a}
+<table>
+<#if list??>
+	<#list list![] as demo>
+		<ul>
+			<li>${demo.id}</li>
+			<li>${demo.name}</li>
+			<li>${demo.passWord}</li>
+		</ul>
+	</#list>
+</#if>
+</table>
 </body>
 
 </html>
