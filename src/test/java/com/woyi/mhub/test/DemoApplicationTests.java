@@ -15,7 +15,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 import com.woyi.mhub.domain.DemoEntity;
-import com.woyi.mhub.mapper.DemoMapper;
+import com.woyi.mhub.repository.DemoRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -41,16 +41,22 @@ public class DemoApplicationTests {
 		resultActions.andExpect(status().isOk());
 	}
 
-	@Autowired
-	private DemoMapper demoMapper;
+//	@Autowired
+//	private DemoMapper demoMapper;
 
+	@Autowired
+	private DemoRepository demoRepository;
+	
 	@Test
 	public void testInsert() throws Exception {
 		DemoEntity demo = new DemoEntity();
-		demo.setId("1");
 		demo.setName("A");
 		demo.setPassWord("111");
-		Assert.assertEquals(1, demoMapper.insert(demo));
+		Assert.assertEquals(2, demoRepository.save(demo));
 	}
-
+	
+	@Test
+	public void testCount() throws Exception {
+		Assert.assertEquals(2, demoRepository.count());
+	}
 }

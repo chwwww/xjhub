@@ -1,18 +1,32 @@
 package com.woyi.mhub.domain;
 
-public class DemoEntity {
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class DemoEntity implements Serializable{
 	
+	private static final long serialVersionUID = -958555221285003019L;
+
+	@Column(nullable = false)
 	private String name;
 	
+	@Column(nullable = false)
 	private String passWord;
 	
-	private String id;
+	@Id
+	@GeneratedValue
+	private Long id;
 	
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

@@ -1,4 +1,4 @@
-package com.woyi.mhub.mapper;
+/*package com.woyi.mhub.mapper;
 
 import java.util.List;
 
@@ -29,4 +29,4 @@ public interface DemoMapper {
 
 	@Delete("DELETE FROM demo WHERE id =#{id}")
 	int delete(Long id);
-}
+}*/
