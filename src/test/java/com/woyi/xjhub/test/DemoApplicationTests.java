@@ -1,4 +1,4 @@
-package com.woyi.mhub.test;
+package com.woyi.xjhub.test;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import org.junit.Assert;
